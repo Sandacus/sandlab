@@ -1,0 +1,15 @@
+@use "theme" as t;
+
+.wrapper {
+  max-width: t.$content-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: t.$space;
+  padding-right: t.$space;
+}
+
+// Apply vertical spacing around your main content
+.page-content {
+  padding-top: t.$space;
+  padding-bottom: t.$space;
+}

@@ -1,0 +1,40 @@
+$font-stack: Helvetica, sans-serif;
+$dark-background-color: #232a2e;
+$light-color: Beige;
+$light-link-color: LightBlue;
+$light-nav-color: LightGreen;
+$light-h-color: #d3c6aa;
+
+body {
+  font: 100% $font-stack;
+  color: $light-color;
+  background-color: $dark-background-color;
+}
+
+h1,
+h2 {
+  color: $light-h-color;
+}
+
+a {
+  color: $light-link-color;
+}
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    color: $light-nav-color;
+  }
+}

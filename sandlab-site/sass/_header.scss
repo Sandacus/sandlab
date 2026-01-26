@@ -1,0 +1,69 @@
+@use "theme" as t;
+
+// Overall header container
+.site-header {
+  background: t.$surface;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+// Nav should line up with page content
+.site-nav {
+  max-width: t.$content-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 t.$space;
+}
+
+// Reset list styles
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  min-height: 56px;
+}
+
+// Individual list items don’t need much
+.site-nav li {
+  margin: 0;
+}
+
+// Links
+.site-nav a {
+  color: t.$text;
+  font-size: 0.95rem;
+  padding: 0.25rem 0;
+  position: relative;
+}
+
+// Hover + focus
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: t.$heading;
+  text-decoration: none;
+}
+
+// Optional: underline indicator (very “Minima-ish”)
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: t.$link;
+  opacity: 0;
+  transform: scaleX(0.8);
+  transition:
+    opacity 150ms ease,
+    transform 150ms ease;
+}
+
+.site-nav a:hover::after,
+.site-nav a:focus-visible::after {
+  opacity: 1;
+  transform: scaleX(1);
+}

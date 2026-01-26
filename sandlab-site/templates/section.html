@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block head %}
+<link rel="stylesheet" href="../style.css" />
+{% endblock head %} {% block content %}
+<h1>{% block title %}{{ section.title | safe }}{% endblock title %}</h1>
+<div>{{ section.content | safe }}</div>
+<div class="posts">
+  <h2>Posts</h2>
+  <ul>
+    {% for post in section.pages %}
+    <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock content %}
