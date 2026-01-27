@@ -6,6 +6,32 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.header-inner {
+  max-width: t.$content-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 t.$space;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 56px;
+}
+
+.site-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: t.$nav-bar;
+  text-decoration: none;
+}
+
+.site-title:hover,
+.site-title:focus-visible {
+  color: t.$heading;
+  text-decoration: none;
+}
+
 // Nav should line up with page content
 .site-nav {
   max-width: t.$content-width;
@@ -23,7 +49,6 @@
   display: flex;
   gap: 1.2rem;
   align-items: center;
-  min-height: 56px;
 }
 
 // Individual list items don’t need much
@@ -33,7 +58,7 @@
 
 // Links
 .site-nav a {
-  color: t.$text;
+  color: t.$nav-bar;
   font-size: 0.95rem;
   padding: 0.25rem 0;
   position: relative;
@@ -42,11 +67,10 @@
 // Hover + focus
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  color: t.$heading;
+  // color: t.$heading;
   text-decoration: none;
 }
 
-// Optional: underline indicator (very “Minima-ish”)
 .site-nav a::after {
   content: "";
   position: absolute;
@@ -54,7 +78,7 @@
   bottom: -6px;
   width: 100%;
   height: 2px;
-  background: t.$link;
+  background: t.$heading;
   opacity: 0;
   transform: scaleX(0.8);
   transition:
@@ -63,7 +87,12 @@
 }
 
 .site-nav a:hover::after,
-.site-nav a:focus-visible::after {
+.site-nav a:focus-visible::after,
+.site-nav a.active::after {
   opacity: 1;
   transform: scaleX(1);
+}
+
+.site-nav a.active {
+  color: t.$heading;
 }
