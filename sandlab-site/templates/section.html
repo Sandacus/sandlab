@@ -1,13 +1,24 @@
-{% extends "base.html" %} {% block head %}
+{% extends "base.html" %} 
+{% block head %}
 <link rel="stylesheet" href="../style.css" />
-{% endblock head %} {% block content %}
-<h1>{% block title %}{{ section.title | safe }}{% endblock title %}</h1>
+{% endblock head %} 
+{% block content %}
+<h1 class="page-title">{% block title %}{{ section.title | safe }}{% endblock title %}</h1>
 <div>{{ section.content | safe }}</div>
 <div class="posts">
   <h2>Posts</h2>
-  <ul>
+  <ul class="post-list">
     {% for post in section.pages %}
-    <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+    <li class="post-item">
+      <a href="{{ post.permalink }}" class="post-link">{{ post.title }}</a>
+      <div class="post-meta">
+        {% if post.description %}{{ post.description }}{% endif %}
+      </div>
+      <div class="post-meta">
+        {% if post.date %}{{ post.date }},{% endif %}
+        {% if post.authors %}{{ post.authors[0] }}{% endif %}
+      </div>
+    </li>
     {% endfor %}
   </ul>
 </div>

@@ -1,0 +1,42 @@
+@use "theme" as t;
+
+.page-title {
+  margin: 0 0 1.2rem 0;
+  font-size: 1.75rem;
+  letter-spacing: -0.01em;
+}
+
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-item {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.post-item:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.post-link {
+  display: inline-block;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: t.$heading;
+  text-decoration: none;
+}
+
+.post-link:hover,
+.post-link:focus-visible {
+  color: t.$link;
+  text-decoration: none;
+}
+
+.post-meta {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: t.$muted;
+}
