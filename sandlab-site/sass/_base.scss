@@ -10,17 +10,20 @@ body {
   margin: 0;
   font-family: t.$font-sans;
   line-height: 1.55;
-  background: t.$bg;
-  color: t.$text;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
-  color: t.$link;
+  color: var(--link);
   text-decoration: none;
 
   &:hover,
   &:focus-visible {
-    color: t.$link-hover;
+    color: (--link-hover);
     text-decoration: underline;
     text-underline-offset: 2px;
   }
@@ -32,7 +35,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: t.$heading;
+  color: (--heading);
   line-height: 1.2;
   margin: 0 0 0.6em 0;
 }

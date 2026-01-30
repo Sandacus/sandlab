@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ get_url(path='./style.css') }}" />
+    <script src="{{ get_url(path='./js/theme.js') }}" defer></script>
     {% block head %} {% endblock head %}
     <title>Sandlab</title>
   </head>
@@ -10,17 +12,22 @@
     <header class="site-header">
       <div class="header-inner">
         <a href="/" class="site-title">[ Sandlab ]</a>
-        <nav class="site-nav">
-          <ul>
-            {% for item in config.extra.nav %}
-            <li>
-              {% set is_home = (current_path == "/") %}
-              {% set is_active = (is_home and item.url == "/") or ((item.url != "/") and (current_path is starting_with(item.url))) %}
-              <a href="{{ item.url }}" class="{% if is_active %}active{% endif %}">{{ item.name }}</a>
-            </li>
-            {% endfor %}
-          </ul>
-        </nav>
+        <div class="header-actions">
+          <nav class="site-nav">
+            <ul>
+              {% for item in config.extra.nav %}
+              <li>
+                {% set is_home = (current_path == "/") %}
+                {% set is_active = (is_home and item.url == "/") or ((item.url != "/") and (current_path is starting_with(item.url))) %}
+                <a href="{{ item.url }}" class="{% if is_active %}active{% endif %}">{{ item.name }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </nav>
+          <button id="theme-toggle" class="theme-toggle" data-theme-toggle type="button" aria-label="Toggle theme">
+            <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+          </button>
+        </div>
       </div>
     </header>
     <main class="page-content">
@@ -32,5 +39,17 @@
         </section>
       </div>
     </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-text">
+          © {{ now() | date(format="%Y") }} Your Site Name
+        </p>
+        <ul class="footer-links">
+          <li><a href="/rss.xml">RSS</a></li>
+          <li><a href="https://github.com/sandacus">GitHub</a></li>
+          <li><a href="mailto:you@example.com">Email</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

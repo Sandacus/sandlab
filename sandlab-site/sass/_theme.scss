@@ -6,12 +6,27 @@ $content-width: 820px;
 $font-sans:
   -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
 
-// Dark theme colors
-$bg: #0b0f14; // page background
-$surface: #0f1621; // optional: cards/boxes later
-$text: #e6edf3; // main text
-$muted: #9aa4af; // secondary text
-$heading: #a7c080; // headings
-$link: #7aa2ff; // links
-$link-hover: #9bb8ff;
-$nav-bar: #e66868;
+:root {
+  // Dark theme colors default
+  --bg: #0b0f14; // page background
+  --surface: #0f1621; // optional: cards/boxes later
+  --text: #e6edf3; // main text
+  --muted: #9aa4af; // secondary text
+  --heading: #a7c080; // headings
+  --link: #7aa2ff; // links
+  --link-hover: #9bb8ff;
+  --nav-bar: #e66868;
+}
+
+/* Light theme */
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --surface: #f6f8fa;
+  --text: #1f2328;
+  --muted: #57606a;
+  --heading: #111827;
+  --link: #0969da;
+  --link-hover: #0550ae;
+  --border: rgba(0, 0, 0, 0.1);
+  --nav: #1f2328;
+}

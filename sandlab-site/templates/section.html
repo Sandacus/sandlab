@@ -1,7 +1,4 @@
 {% extends "base.html" %} 
-{% block head %}
-<link rel="stylesheet" href="../style.css" />
-{% endblock head %} 
 {% block content %}
 <h1 class="page-title">{% block title %}{{ section.title | safe }}{% endblock title %}</h1>
 <div>{{ section.content | safe }}</div>

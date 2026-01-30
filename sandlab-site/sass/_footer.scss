@@ -1,0 +1,48 @@
+@use "theme" as t;
+
+.site-footer {
+  margin-top: 3rem;
+  background: var(--surface);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-inner {
+  max-width: t.$content-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.2rem t.$space;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: var(--heading);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

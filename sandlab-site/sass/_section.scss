@@ -25,18 +25,18 @@
   display: inline-block;
   font-size: 1.15rem;
   font-weight: 600;
-  color: t.$heading;
+  color: var(--heading);
   text-decoration: none;
 }
 
 .post-link:hover,
 .post-link:focus-visible {
-  color: t.$link;
+  color: var(--link);
   text-decoration: none;
 }
 
 .post-meta {
   margin-top: 0.25rem;
   font-size: 0.9rem;
-  color: t.$muted;
+  color: var(--muted);
 }

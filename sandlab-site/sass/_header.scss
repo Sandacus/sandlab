@@ -2,7 +2,7 @@
 
 // Overall header container
 .site-header {
-  background: t.$surface;
+  background: var(--surface);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -22,22 +22,14 @@
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  color: t.$nav-bar;
+  color: var(--nav-bar);
   text-decoration: none;
 }
 
 .site-title:hover,
 .site-title:focus-visible {
-  color: t.$heading;
+  color: var(--heading);
   text-decoration: none;
-}
-
-// Nav should line up with page content
-.site-nav {
-  max-width: t.$content-width;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 t.$space;
 }
 
 // Reset list styles
@@ -58,7 +50,7 @@
 
 // Links
 .site-nav a {
-  color: t.$nav-bar;
+  color: var(--nav-bar);
   font-size: 0.95rem;
   padding: 0.25rem 0;
   position: relative;
@@ -78,7 +70,7 @@
   bottom: -6px;
   width: 100%;
   height: 2px;
-  background: t.$heading;
+  background: var(--heading);
   opacity: 0;
   transform: scaleX(0.8);
   transition:
@@ -94,5 +86,39 @@
 }
 
 .site-nav a.active {
-  color: t.$heading;
+  color: var(--heading);
+}
+
+.theme-toggle {
+  margin-left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--nav);
+
+  cursor: pointer;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  border-color: var(--link);
+  color: var(--heading);
+  outline: none;
+}
+
+.theme-toggle__icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
 }

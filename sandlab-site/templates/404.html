@@ -3,9 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page not found!</title>
+    <link rel="stylesheet" href="{{ get_url(path='./style.css') }}" />
+    <script src="{{ get_url(path='./js/theme.js') }}" defer></script>
+    {% block head %} {% endblock head %}
+    <title>Sandlab</title>
   </head>
   <body>
-    <h1>404 Page not found!</h1>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/" class="site-title">[ Sandlab ]</a>
+        <div class="header-actions">
+          <nav class="site-nav">
+            <ul>
+              {% for item in config.extra.nav %}
+              <li>
+                <a href="{{ item.url }}" class="">{{ item.name }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </nav>
+          <button id="theme-toggle" class="theme-toggle" data-theme-toggle type="button" aria-label="Toggle theme">
+            <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="page-content">
+      <div class="wrapper">
+        <section class="section">
+          <div class="container">
+            <h1>404 page not found!</h1>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-text">
+          © {{ now() | date(format="%Y") }} Your Site Name
+        </p>
+        <ul class="footer-links">
+          <li><a href="/rss.xml">RSS</a></li>
+          <li><a href="https://github.com/sandacus">GitHub</a></li>
+          <li><a href="mailto:you@example.com">Email</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
