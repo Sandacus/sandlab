@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{ get_url(path='./style.css') }}" />
-    <script src="{{ get_url(path='./js/theme.js') }}" defer></script>
+    <link rel="stylesheet" href="{{ get_url(path='/style.css') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ get_url(path='/favicons/favicon.ico') }}">
+    <script src="{{ get_url(path='/js/theme.js') }}" defer></script>
     {% block head %} {% endblock head %}
     <title>Sandlab</title>
   </head>
