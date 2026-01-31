@@ -29,15 +29,17 @@ jobs:
           tool: zola@0.22.1
 
       - name: Check site (links)
+        working-directory: sandlab-site
         run: zola check
 
       - name: Build site
+        working-directory: sandlab-site
         run: zola build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: sandlab-site/public
 
   deploy:
     runs-on: ubuntu-latest
