@@ -18,9 +18,9 @@
             <ul>
               {% for item in config.extra.nav %}
               <li>
-                {% set is_home = (current_path == "/") %}
-                {% set is_active = (is_home and item.url == "/") or ((item.url != "/") and (current_path is starting_with(item.url))) %}
-                <a href="{{ item.url }}" class="{% if is_active %}active{% endif %}">{{ item.name }}</a>
+                {% set is_home = (current_path == config.base_url) %}
+                {% set is_active = (is_home and item.url == "/") or ((item.url != "/") and (current_path is starting_with(config.base_url ~ item.url))) %}
+                <a href="{{ config.base_url ~ item.url }}" class="{% if is_active %}active{% endif %}">{{ item.name }}</a>
               </li>
               {% endfor %}
             </ul>
