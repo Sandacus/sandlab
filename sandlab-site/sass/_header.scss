@@ -2,8 +2,9 @@
 
 // Overall header container
 .site-header {
-  background: var(--surface);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--header);
+  // border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--header-bottom-border);
 }
 
 .header-inner {
@@ -28,7 +29,7 @@
 
 .site-title:hover,
 .site-title:focus-visible {
-  color: var(--heading);
+  color: var(--nav-bar-active);
   text-decoration: none;
 }
 
@@ -59,7 +60,6 @@
 // Hover + focus
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  // color: t.$heading;
   text-decoration: none;
 }
 
@@ -86,7 +86,7 @@
 }
 
 .site-nav a.active {
-  color: var(--heading);
+  color: var(--nav-bar-active);
 }
 
 .theme-toggle {
@@ -100,16 +100,16 @@
   border-radius: 8px;
 
   background: transparent;
-  border: 1px solid var(--border);
-  color: var(--nav);
+  border: 1px solid var(--theme-toggle);
+  color: var(--theme-toggle);
 
   cursor: pointer;
 }
 
 .theme-toggle:hover,
 .theme-toggle:focus-visible {
-  border-color: var(--link);
-  color: var(--heading);
+  border-color: var(--nav-bar);
+  color: var(--nav-bar-active);
   outline: none;
 }
 

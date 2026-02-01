@@ -9,24 +9,33 @@ $font-sans:
 :root {
   // Dark theme colors default
   --bg: #0b0f14; // page background
-  --surface: #0f1621; // optional: cards/boxes later
+  --surface: #0f1621;
   --text: #e6edf3; // main text
   --muted: #9aa4af; // secondary text
   --heading: #a7c080; // headings
   --link: #7aa2ff; // links
   --link-hover: #9bb8ff;
+  --border: rgba(0, 0, 0, 0.1);
+  --header: #0f1621;
+  --header-bottom-border: rgba(255, 255, 255, 0.08);
+  --theme-toggle: #5c6a72;
   --nav-bar: #e66868;
+  --nav-bar-active: #a7c080;
 }
 
 /* Light theme */
 :root[data-theme="light"] {
-  --bg: #ffffff;
-  --surface: #f6f8fa;
+  --bg: #fffbef;
+  --surface: #f2efdf;
   --text: #1f2328;
   --muted: #57606a;
-  --heading: #111827;
+  --heading: #657501;
   --link: #0969da;
   --link-hover: #0550ae;
   --border: rgba(0, 0, 0, 0.1);
-  --nav: #1f2328;
+  --header: #f2efdf;
+  --header-bottom-border: #bec5b2;
+  --theme-toggle: #5c6a72;
+  --nav-bar: #f73936;
+  --nav-bar-active: #657501;
 }
