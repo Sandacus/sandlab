@@ -2,6 +2,7 @@
 
 .post-header {
   margin-bottom: 1.4rem;
+  border-bottom: 1px solid var(--post-separator);
 }
 
 .post-title {
@@ -12,8 +13,9 @@
 
 .post-meta {
   margin: 0;
-  color: var(--muted);
+  color: var(--post-meta-date);
   font-size: 0.95rem;
+  font-style: italic;
 }
 
 /* Content typography */

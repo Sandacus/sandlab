@@ -14,16 +14,16 @@
 
 .post-item {
   padding: 0.9rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--post-separator); //1px solid rgba(255, 255, 255, 0.08);
 }
 
 .post-item:first-child {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--post-separator);
 }
 
 .post-link {
   display: inline-block;
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--heading);
   text-decoration: none;
@@ -35,8 +35,15 @@
   text-decoration: none;
 }
 
-.post-meta {
+.post-meta-date {
   margin-top: 0.25rem;
   font-size: 0.9rem;
-  color: var(--muted);
+  font-style: italic;
+  color: var(--post-meta-date);
+}
+
+.post-meta-description {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: var(--post-meta-description);
 }
