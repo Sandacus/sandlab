@@ -5,4 +5,6 @@ date = 2026-01-24
 authors = ["Sandy"]
 +++
 
-After deciding to go down the homelab rabbit hole. I decided I should have a place to put my notes and can remember what I have done.
+After deciding to go down the homelab rabbit hole, I set up this website so I have a place to put my notes.
+
+I have decided to use the (Zola)[https://www.getzola.org/] static site generator for creating the website and will host it on (Github Pages)[https://docs.github.com/en/pages].
