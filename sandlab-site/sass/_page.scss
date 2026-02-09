@@ -13,8 +13,17 @@
 
 .post-meta {
   margin: 0;
+}
+
+.post-meta-date {
   color: var(--post-meta-date);
   font-size: 0.95rem;
+  font-style: italic;
+}
+
+.post-meta-updated {
+  color: var(--post-meta-updated);
+  font-size: 0.85rem;
   font-style: italic;
 }
 
