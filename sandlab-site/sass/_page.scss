@@ -68,9 +68,22 @@
   }
 
   hr {
-    border: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 1.6rem 0;
+    border: none;
+    height: auto;
+    margin: 4rem auto;
+    text-align: center;
+    overflow: visible;
+  }
+
+  hr::before {
+    content: "***";
+    display: inline-block;
+    font-size: 1.35rem;
+    letter-spacing: 0.5em;
+    line-height: 1;
+    color: currentColor;
+    opacity: 0.67;
+    transform: translateX(0.28em); /* optical centering for letter-spacing */
   }
 
   /* Inline code */
