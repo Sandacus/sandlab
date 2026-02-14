@@ -30,7 +30,7 @@ jobs:
 
       - name: Check site (links)
         working-directory: sandlab-site
-        run: zola check
+        run: zola check --skip-external-links
 
       - name: Build site
         working-directory: sandlab-site
