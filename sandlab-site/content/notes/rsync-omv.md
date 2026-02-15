@@ -2,7 +2,6 @@
 title = "RSync on OMV"
 description = "Setup a job to copy the media files from one SSD to another SSD on OpenMediaVault"
 date = 2026-02-15
-draft = true
 +++
 
 ## Task 
