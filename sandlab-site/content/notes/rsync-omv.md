@@ -27,7 +27,6 @@ I have a Jellyfin server set up on in a Proxmox LXC and the options for sharing 
 
 From doing a bit of research[^1], I think the best practice is to pass an NFS share directly to the LXC running the Jellyfin server.
 
-[^1] This article [Why Mounting SMB on Proxmox might be your biggest mistake](https://medium.com/@PlanB./why-mounting-smb-on-proxmox-might-be-your-next-big-mistake-98d35c70b16d) suggests this the most secure/best practice.
 
 The main reasons for this are the the direct passthrough of NFS is more secure, i.e., reduces the potential "blast" radius, and the consensus seems to be that NFS is a better transfer protocol (more stable, more secure) than SMB.
 
@@ -66,3 +65,5 @@ Got to OMV -> Services -> RSync -> Tasks. Click the "+" icon to create a new tas
 The interface allows creation of a schedule for various times, or you can disable it and just run it manually as desired.
 
 {{ image(path="/images/rsync-task-setup.png") }}
+
+[^1]: This article [Why Mounting SMB on Proxmox might be your biggest mistake](https://medium.com/@PlanB./why-mounting-smb-on-proxmox-might-be-your-next-big-mistake-98d35c70b16d) suggests this the most secure/best practice.
