@@ -11,7 +11,9 @@ To set up an NFS share on Open Media Vault (OMV);
 - [OMV docs for NFS](https://docs.openmediavault.org/en/8.x/administration/services/nfs.html)
 - head to OMV web interface
 - Services -> NFS -> Settings; then click enabled, save and apply changes
+
     > Warning: If you don't do this step you will spend an embarrasing amount of time trying to figure out why you can't mount your NFS share 😅... I assume... definitely didn't happen to me. 
+
 - Services -> NFS -> Shares; create with + button
   - name the share
   - choose the file system you already made (make sure your filesystem is compatible with NFS)

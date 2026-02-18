@@ -25,6 +25,9 @@ $font-sans:
   --post-meta-date: #e66868;
   --post-meta-updated: #c43b3b;
   --post-meta-description: #bec5b2;
+  --blockquote: #9aa4af;
+  --blockquote-background: #1a1d1c;
+  --blockquote-left-border: #272e33;
 }
 
 /* Light theme */
@@ -46,4 +49,7 @@ $font-sans:
   --post-meta-date: #e66868;
   --post-meta-updated: #493b40;
   --post-meta-description: #414b50;
+  --blockquote: #57606a;
+  --blockquote-background: #f8f5e4;
+  --blockquote-left-border: #d3c6aa;
 }
