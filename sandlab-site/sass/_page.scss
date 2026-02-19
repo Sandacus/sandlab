@@ -125,4 +125,42 @@
     text-decoration: underline;
     text-underline-offset: 2px;
   }
+
+  /* Footnote styling */
+  .footnote-definition {
+    display: grid;
+    grid-template-columns: 1em 1fr;
+    gap: 0.6em;
+    margin: 0.6em 0;
+    font-size: 0.85rem;
+    color: var(--post-meta-date);
+  }
+
+  .footnote-definition:first-of-type {
+    margin-top: 2.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--post-separator);
+  }
+
+  .footnote-definition:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .footnote-definition-label {
+    vertical-align: baseline;
+    line-height: 1.4;
+    font-size: 1em;
+    font-weight: 600;
+    opacity: 0.8;
+  }
+
+  .footnote-definition-label::after {
+    content: ".";
+  }
+
+  .footnote-definition p {
+    margin: 0;
+    vertical-align: baseline;
+    color: var(--muted);
+  }
 }
