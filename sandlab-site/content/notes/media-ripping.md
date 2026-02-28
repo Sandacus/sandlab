@@ -6,7 +6,7 @@ date = 2026-02-28
 
 The main tool used is [MakeMKV](https://www.makemkv.com/).
 It is free to download, but for ripping blur-rays you need a licence, which can be purchased for $50 for a lifetime licence.
-For ripping UHD Blu-rays, i.e., 4K films, you will need a drive that has the correct firmware installed.
+For ripping UHD Blu-rays, i.e., 4K films, you will need a drive that has the correct firmware installed; see this [MakeMKV forum post](https://forum.makemkv.com/forum/viewtopic.php?t=19634) for more details.
 
 At its core, this is a pretty simple workflow with only 2 main steps.
 

@@ -1,0 +1,30 @@
+@use "theme" as t;
+
+.home-header { 
+    margin-bottom: 2rem; 
+}
+
+.home-intro { 
+    max-width: 65ch; 
+}
+
+.home-section { 
+    margin-top: 2.5rem; 
+}
+
+.post-list { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0.75rem 0 0; 
+}
+
+.post-item { 
+    display: flex; 
+    gap: 1rem; 
+    align-items: baseline; 
+    margin: 0.5rem 0; 
+}
+
+.post-meta { 
+    opacity: 0.7; 
+}
