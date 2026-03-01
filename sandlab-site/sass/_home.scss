@@ -8,23 +8,45 @@
     max-width: 65ch; 
 }
 
-.home-section { 
-    margin-top: 2.5rem; 
+a {
+    color: var(--link);
 }
 
-.post-list { 
+.home-latest-posts {
+    margin-top: 3rem;
+    border-top: 1px solid var(--post-separator);
+}
+
+.home-posts-section { 
+    margin-top: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--post-separator);
+}
+
+.home-posts-section-title {
+    opacity: 0.9;
+    color: var(--heading);
+}
+
+.home-post-list { 
     list-style: none; 
     padding: 0; 
     margin: 0.75rem 0 0; 
 }
 
-.post-item { 
+.home-post-item { 
     display: flex; 
     gap: 1rem; 
     align-items: baseline; 
     margin: 0.5rem 0; 
+
+    a {
+        opacity: 0.9;
+        color: var(--heading);
+    }
 }
 
-.post-meta { 
-    opacity: 0.7; 
+.home-post-meta-date { 
+    opacity: 0.9;
+    color: var(--post-meta-date);
 }

@@ -11,38 +11,40 @@
   {% endif %}
 </section>
 
-{# --- Latest 2 notes --- #}
-{% set notes = get_section(path="notes/_index.md") %}
-{% set latest_notes = notes.pages | slice(end=2) %}
-<section class="home-section">
-  <h2><a href="{{ notes.permalink }}">Latest notes</a></h2>
-  <ul class="post-list">
-    {% for page in latest_notes %}
-      <li class="post-item">
-        <a href="{{ page.permalink }}">{{ page.title }}</a>
-        <small class="post-meta">
-          {% if page.date %}{{ page.date | date(format="%Y-%m-%d") }}{% endif %}
-        </small>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
+<div class="home-latest-posts">
+  {# --- Latest 2 notes --- #}
+  {% set notes = get_section(path="notes/_index.md") %}
+  {% set latest_notes = notes.pages | slice(end=3) %}
+  <section class="home-posts-section">
+    <h2><a href="{{ notes.permalink }}" class="home-posts-section-title">Latest notes</a></h2>
+    <ul class="home-post-list">
+      {% for page in latest_notes %}
+        <li class="home-post-item">
+          <small class="home-post-meta-date">
+            {% if page.date %}{{ page.date | date(format="%Y-%m-%d") }}{% endif %}
+          </small>
+          <a href="{{ page.permalink }}">{{ page.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
 
-{# --- Latest 2 blog posts --- #}
-{% set blog = get_section(path="blog/_index.md") %}
-{% set latest_blog = blog.pages | slice(end=2) %}
-<section class="home-section">
-  <h2><a href="{{ blog.permalink }}">Latest blog posts</a></h2>
-  <ul class="post-list">
-    {% for page in latest_blog %}
-      <li class="post-item">
-        <a href="{{ page.permalink }}">{{ page.title }}</a>
-        <small class="post-meta">
-          {% if page.date %}{{ page.date | date(format="%Y-%m-%d") }}{% endif %}
-        </small>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
+  {# --- Latest 2 blog posts --- #}
+  {% set blog = get_section(path="blog/_index.md") %}
+  {% set latest_blog = blog.pages | slice(end=3) %}
+  <section class="home-posts-section">
+    <h2><a href="{{ blog.permalink }}" class="home-posts-section-title">Latest blog posts</a></h2>
+    <ul class="home-post-list">
+      {% for page in latest_blog %}
+        <li class="home-post-item">
+          <small class="home-post-meta-date">
+            {% if page.date %}{{ page.date | date(format="%Y-%m-%d") }}{% endif %}
+          </small>
+          <a href="{{ page.permalink }}">{{ page.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
 
 {% endblock content %}

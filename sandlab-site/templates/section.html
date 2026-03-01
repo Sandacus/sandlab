@@ -2,7 +2,7 @@
 {% block content %}
 <h1 class="page-title">{% block title %}{{ section.title | safe }}{% endblock title %}</h1>
 <div>{{ section.content | safe }}</div>
-<div class="posts">
+<div>
   <ul class="post-list">
     {% for post in section.pages %}
     <li class="post-item">
