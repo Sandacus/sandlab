@@ -43,3 +43,32 @@ h6 {
 p {
   margin: 0 0 1em 0;
 }
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  margin: 2em auto;
+  border-collapse: collapse;
+  border-top: 1px solid #2b3b4e;
+  border-bottom: 1px solid #2b3b4e;
+}
+
+table td:first-child,
+table th:first-child {
+  width: 33%;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #1b2531;
+}
+
+thead {
+  text-align: left;
+}
+
+th,
+td {
+  padding: 0.4em;
+  border-top: 1px solid #2b3b4e;
+  border-bottom: 1px solid #2b3b4e;
+}

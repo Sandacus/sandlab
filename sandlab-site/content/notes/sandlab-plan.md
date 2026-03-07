@@ -22,14 +22,16 @@ List of requirements for sandlab;
 
 List of software/services that can help achieve the requirements and others that seem cool;
 
-* Jellyfin -> Media Server
-* NAS -> Open Media Vault
-* Docker -> containerisation engine for running applications
-* Immich -> Self-hosted photos
-* Tailscale -> External access
-* Kiwix server -> offline internet
-* Paperless-ngx -> document management for digitising documents
-* Gogs, Gitea, Gitlab -> local git server
-* Librespeed -> test network speed
-* Backup process: wip
-* Local networking: wip
+| Requirement       | Software & Services                       |
+| ---               | ---                                       |
+| Media Server      | Jellyfin, Emby, Plex                      |
+| NAS               | OpenMediaVault, TrueNas, UnRaid           |
+| Photos            | Immich                                    |
+| VPN/Remote access | Wireguard, Tailscale, Netbird, Twingate   |
+| Offline internet  | Kiwix server                              |
+| Local Git server  | Forgejo, Gogs, Gitea, Gitlab              |
+| Paper document    | Paperless-ngx                             |
+| Backup software   | restic, autrestic                         |
+| Local networking  | wip                                       |
+| Utilities         | Librespeed (test network speed)           |
+
